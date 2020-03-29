@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: rails.kube8v1.com
+  labels:
+    app: exoplaneapp
+spec:
+  containers:
+  - name: exoplaneapp
+    image: ramisn/exoplaneapp:latest
+    ports:
+    - name: rails-port
+      containerPort: 3000
